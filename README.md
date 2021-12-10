@@ -22,3 +22,18 @@ Examples:
 | order1.json    | 200    |
 | order2.json    | 200    |
 ```
+
+## configuration
+
+az ad sp create-for-rbac -n "APIM testing" --role "API Management Service Contributor" --scopes /subscriptions/$(az account show --query id -o tsv)
+
+note values and put into environment variables
+
+```shell
+export subscriptionId="..."
+export tenantId="..."
+export clientId="..."
+export clientSecret="..."
+export resourceGroupName="..."
+export serviceName="..."
+```
